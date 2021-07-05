@@ -1,0 +1,49 @@
+{
+  "config.title": "File Search Sidebar",
+  "config.workspaceFolder.description": "The folder to look in for workspace files. This extension will return files from your workspace by default.",
+  "config.workspaceFolderDepth.description": "What depth of subfolders should also be looked in. Range: 0-5",
+  "config.workspaceSearchMinimum.description": "The minimum number of workspace files required for the search box to be displayed. 0 will always show the search box. Range: 0-100",
+  "config.workspaceShowPath.always": "Always show paths",
+  "config.workspaceShowPath.asneeded": "Show paths when a workspace has the same label as another",
+  "config.workspaceShowPath.description": "Display paths to the workspace files in the sidebar. Either: 'Always', 'Never', or 'As needed' (only shows paths for workspaces with the same label).",
+  "config.workspaceShowPath.never": "Never show paths",
+  "ext.cmd.wsList.refresh": "Reload Files",
+  "ext.cmd.wsList.sort": "Sort Files",
+  "ext.cmd.wsListItem.checkSettings": "Check the extension settings or open a folder/workspace and refresh",
+  "ext.cmd.wsListItem.open.curWindow": "Open in this window",
+  "ext.cmd.wsListItem.open.newWindow": "Open in a new window",
+  "views.title": "Files",
+  "viewsContainers.activitybar.title": "Filenames",
+  "errors": {
+    "viewNotFound": "Filename Search Sidebar: WebviewView not found"
+  },
+  "sort": {
+    "ascending": {
+      "description": "Sort from a-z",
+      "label": "Ascending"
+    },
+    "descending": {
+      "description": "Sort from z-a",
+      "label": "Descending"
+    }
+  },
+  "workspace": {
+    "checkSettings": "Check the extension settings or open a folder/workspace",
+    "error-fetch": "An error occured while collecting workspace files",
+    "error": "An unknown error occured",
+    "inValid": "Folder path is not a directory",
+    "list-empty": "No workspace files found",
+    "listItem": {
+      "iconAlt": "New window icon",
+      "openCurWin": "Open '{{label}}' in this window",
+      "openNewWin": "Open '{{label}}' in a new window",
+      "selected": "Current workspace"
+    },
+    "loading": "Collecting filenames...",
+    "none": "No files found",
+    "searchedOut": "No files matched your search terms",
+    "viewTitle": "Filesnames: {{title}}",
+    "titleList": "{{total}}",
+    "titleListSearched": "{{matches}}/{{total}}"
+  }
+}
