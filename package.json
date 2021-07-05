@@ -1,6 +1,6 @@
 {
   "name": "vscode-filename-search",
-  "description": "Adds a sidebar to VSCode that lists filenames in your workspace and lets you open them in the current window.",
+  "description": "Adds a searchable sidebar to VSCode that lists filenames in your workspace and lets you open them in the current window.",
   "displayName": "Filename Search",
   "version": "0.0.1",
   "activationEvents": [
