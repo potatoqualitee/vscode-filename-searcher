@@ -111,10 +111,9 @@
     },
     "keybindings": [
       {
-        "command": "vscode-filename-search-focus-search",
+        "command": "workbench.view.extension.vscode-filename-search",
         "key": "ctrl+shift+q",
-        "mac": "cmd+shift+q",
-        "when": "sideBarVisible && focusedView == vscode-filename-search-webview-workspace"
+        "mac": "cmd+shift+q"
       }
     ],
     "menus": {
@@ -135,6 +134,12 @@
           "command": "vscode-filename-search-sort",
           "group": "navigation",
           "when": "view == vscode-filename-search-webview-workspace && vscode-filename-search-list-loaded"
+        }
+      ],
+      "touchBar": [
+        {
+          "command": "workbench.view.extension.vscode-filename-search",
+          "group": "display"
         }
       ]
     },
