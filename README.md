@@ -9,7 +9,7 @@ Files can also be sorted ascending or descending.
 The results are cached for 12 Hours but there is a refresh button that you can click to recollect filenames at any time. The search refreshes automatically when files are renamed, created, and deleted.
 &nbsp;<br>
 
-![alt text](https://user-images.githubusercontent.com/8278033/124402645-f6484700-dd31-11eb-9852-e62d4b4bdfe9.gif 'Filename Sidebar Search')
+https://user-images.githubusercontent.com/8278033/124404694-52b06400-dd3c-11eb-8156-9940c1ce68cd.mp4
 
 ## Settings
 
