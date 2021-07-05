@@ -2,7 +2,7 @@
 
 **(vscode-filename-search)**
 
-Adds a sidebar to VSCode that lists files in your workspace and lets you open them in a new window. A search box is also available to allow you to filter down to specific files.
+<img align="left" src=./logo.png alt="logo">  This VS Code Extension adds a sidebar to VSCode that lists files in your workspace and lets you open them in a new window. A search box is also available to allow you to filter down to specific files.
 
 Files can also be sorted ascending or descending.
 
