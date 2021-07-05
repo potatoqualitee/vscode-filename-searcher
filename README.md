@@ -7,9 +7,10 @@
 Files can also be sorted ascending or descending.
 
 The results are cached for 12 Hours but there is a refresh button that you can click to recollect filenames at any time. The search refreshes automatically when files are renamed, created, and deleted.
-&nbsp;<br>
 
-https://user-images.githubusercontent.com/8278033/124404694-52b06400-dd3c-11eb-8156-9940c1ce68cd.mp4
+https://user-images.githubusercontent.com/8278033/124448117-5f57ab00-dd82-11eb-8929-a830a885c9d7.mp4
+
+I wrote this because I'm not good at key combos and prefer using a mouse for searches.
 
 ## Settings
 
