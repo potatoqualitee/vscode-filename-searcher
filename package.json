@@ -16,10 +16,7 @@
     "commands": [
       {
         "command": "workbench.view.extension.vscode-filename-search",
-        "icon": {
-          "light": "./resources/images/light/refresh.svg",
-          "dark": "./resources/images/dark/refresh.svg"
-        },
+        "icon": "touchbar.png",
         "title": "The extension to open in TouchBar"
       },
       {
