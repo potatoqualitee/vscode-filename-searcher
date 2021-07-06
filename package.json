@@ -16,8 +16,7 @@
     "commands": [
       {
         "command": "workbench.view.extension.vscode-filename-search",
-        "icon": "touchbar.png",
-        "title": "The extension to open in TouchBar"
+        "icon": "touchbar.png"
       },
       {
         "command": "vscode-filename-search-open-new-win",
