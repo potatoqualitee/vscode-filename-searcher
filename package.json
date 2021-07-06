@@ -15,8 +15,13 @@
   "contributes": {
     "commands": [
       {
-        "command": "vscode-filename-search-open-cur-win",
-        "title": "Open in this window"
+        "command": "workbench.view.extension.vscode-filename-search",
+        "icon": "logo.png",
+        "title": "The extension to open in TouchBar"
+      },
+      {
+        "command": "vscode-filename-search-open-new-win",
+        "title": "Open in a new window"
       },
       {
         "command": "vscode-filename-search-open-new-win",
@@ -111,10 +116,9 @@
     },
     "keybindings": [
       {
-        "command": "vscode-filename-search-focus-search",
+        "command": "workbench.view.extension.vscode-filename-search",
         "key": "ctrl+shift+q",
-        "mac": "cmd+shift+q",
-        "when": "sideBarVisible && focusedView == vscode-filename-search-webview-workspace"
+        "mac": "cmd+shift+q"
       }
     ],
     "menus": {
@@ -135,6 +139,12 @@
           "command": "vscode-filename-search-sort",
           "group": "navigation",
           "when": "view == vscode-filename-search-webview-workspace && vscode-filename-search-list-loaded"
+        }
+      ],
+      "touchBar": [
+        {
+          "command": "workbench.view.extension.vscode-filename-search",
+          "group": "display"
         }
       ]
     },
@@ -158,7 +168,7 @@
     }
   },
   "engines": {
-    "vscode": "^1.57.0"
+    "vscode": "^1.57.1"
   },
   "icon": "logo.png",
   "keywords": [
@@ -190,42 +200,42 @@
     "test": "node ./out/test/runTest.js"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^1.5.0",
-    "@types/chai": "^4.2.14",
-    "@types/sinon": "^9.0.9",
-    "chai": "^4.2.0",
+    "@reduxjs/toolkit": "^1.6.0",
     "crypto": "^1.0.1",
-    "vscode-codicons": "0.0.7",
+    "vscode-codicons": "0.0.17",
     "vscode-ext-localisation": "^1.0.1"
   },
   "devDependencies": {
+    "@types/sinon": "^10.0.2",
+    "@types/chai": "^4.2.19",
+    "chai": "^4.3.4",
     "@commitlint/config-conventional": "^13.0.0",
     "@types/glob": "^7.1.3",
     "@types/mocha": "^8.2.2",
     "@types/mock-fs": "^4.13.0",
-    "@types/node": "14.x",
-    "@types/stylelint": "^9.10.1",
-    "@types/vscode": "^1.53.0",
-    "@typescript-eslint/eslint-plugin": "^4.26.0",
-    "@typescript-eslint/parser": "^4.26.0",
+    "@types/node": "16.x",
+    "@types/stylelint": "^13.13.1",
+    "@types/vscode": "^1.57.1",
+    "@typescript-eslint/eslint-plugin": "^4.28.2",
+    "@typescript-eslint/parser": "^4.28.2",
     "babel": "^6.23.0",
     "commitlint": "^13.0.0",
-    "eslint": "^7.27.0",
+    "eslint": "^7.30.0",
     "glob": "^7.1.7",
-    "husky": "^4.2.3",
-    "lint-staged": "^10.0.8",
-    "mocha": "^8.4.0",
-    "mock-fs": "^4.13.0",
-    "parcel": "^2.0.0-beta.2",
-    "prettier": "^2.0.5",
+    "husky": "^7.0.0",
+    "lint-staged": "^11.0.0",
+    "mocha": "^9.0.2",
+    "mock-fs": "^5.0.0",
+    "parcel": "^2.0.0-nightly.752",
+    "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
-    "stylelint": "^13.9.0",
-    "stylelint-config-recommended": "^3.0.0",
-    "ts-loader": "^9.2.2",
-    "ts-node": "^8.10.2",
-    "typescript": "^4.3.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-recommended": "^5.0.0",
+    "ts-loader": "^9.2.3",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.5",
     "vscode-test": "^1.5.2",
-    "webpack": "^5.38.1",
-    "webpack-cli": "^4.7.0"
+    "webpack": "^5.42.1",
+    "webpack-cli": "^4.7.2"
   }
 }

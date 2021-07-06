@@ -2,15 +2,15 @@
 
 **(vscode-filename-search)**
 
-<img align="left" src=./logo.png alt="logo">  This VS Code Extension adds a sidebar to VSCode that lists files in your workspace and lets you open them in a new window. A search box is also available to allow you to filter down to specific files.
+<img align="left" src="https://github.com/potatoqualitee/vscode-filename-search/raw/main/logo.png" alt="logo">  This VS Code Extension is for people who use their mouse instead of complex key combos. It adds a sidebar to VSCode that lists and searches files in your workspace and lets you open them in a new window, with a click.
 
-Files can also be sorted ascending or descending.
+Files can be sorted ascending or descending.
 
-The results are cached for 12 Hours but there is a refresh button that you can click to recollect filenames at any time. The search refreshes automatically when files are renamed, created, and deleted.
+The results are cached for 7 days but there is a refresh button that you can click to recollect filenames at any time. The search refreshes automatically when files are renamed, created, and deleted.
 
 https://user-images.githubusercontent.com/8278033/124448117-5f57ab00-dd82-11eb-8929-a830a885c9d7.mp4
 
-I wrote this because I'm not good at key combos and prefer using a mouse for searches.
+I wrote this because I'm not good at key combos and prefer using a mouse for searches. It also replicates functionality that I used to appreciate in PowerShell Studio.
 
 ## Settings
 

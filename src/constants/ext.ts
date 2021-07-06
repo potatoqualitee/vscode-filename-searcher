@@ -13,6 +13,6 @@ export const EXT_WSLIST_ITEM_LOADING_CTX = `${EXT_WSLIST_VIEW_ID}-loading`;
 // Global State
 // but add cache per workspace
 export const EXT_WSSTATE_CACHE = `${EXT}-cache-${configfolder}`;
-export const EXT_WSSTATE_CACHE_DURATION = 43200; // 12 Hours
+export const EXT_WSSTATE_CACHE_DURATION = 604800; // 7 days
 export const EXT_SORT = `${EXT}-sort`;
 export const EXT_WEBVIEW_WS = `${EXT}-webview-workspace`;

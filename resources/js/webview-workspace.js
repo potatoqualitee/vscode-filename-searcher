@@ -59,7 +59,7 @@
         searchTerm = event.target.value;
       }
       handleSearchSubmit();
-    }, 600);
+    }, 750);
   };
 
   const handleSearch = (event) => {
