@@ -1,6 +1,6 @@
 # Filename Sidebar Search
 
-**(vscode-filename-search)**
+**(filename-search)**
 
 <img align="left" src="https://github.com/potatoqualitee/vscode-filename-search/raw/main/logo.png" alt="logo">  This VS Code Extension is for people who use their mouse instead of complex key combos. It adds a sidebar to VSCode that lists and searches files in your workspace and lets you open them in a new window, with a click.
 

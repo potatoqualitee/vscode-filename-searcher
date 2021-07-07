@@ -1,5 +1,5 @@
 {
-  "name": "vscode-filename-search",
+  "name": "filename-search",
   "description": "Adds a searchable sidebar to VSCode that lists filenames in your workspace and lets you open them in the current window.",
   "displayName": "Filename Search",
   "version": "0.0.1",
@@ -15,20 +15,20 @@
   "contributes": {
     "commands": [
       {
-        "command": "workbench.view.extension.vscode-filename-search",
+        "command": "workbench.view.extension.filename-search",
         "icon": "touchbar.png",
         "title": "Filename search"
       },
       {
-        "command": "vscode-filename-search-open-new-win",
+        "command": "filename-search-open-new-win",
         "title": "Open in a new window"
       },
       {
-        "command": "vscode-filename-search-open-new-win",
+        "command": "filename-search-open-new-win",
         "title": "Open in a new window"
       },
       {
-        "command": "vscode-filename-search-refresh",
+        "command": "filename-search-refresh",
         "icon": {
           "light": "./resources/images/light/refresh.svg",
           "dark": "./resources/images/dark/refresh.svg"
@@ -36,11 +36,11 @@
         "title": "Reload Files"
       },
       {
-        "command": "vscode-filename-search-settings",
+        "command": "filename-search-settings",
         "title": "Check the extension settings or open a folder/workspace and refresh"
       },
       {
-        "command": "vscode-filename-search-sort",
+        "command": "filename-search-sort",
         "icon": {
           "light": "./resources/images/light/sort.svg",
           "dark": "./resources/images/dark/sort.svg"
@@ -49,7 +49,7 @@
       }
     ],
     "configuration": {
-      "title": "File Search Sidebar",
+      "title": "Filename Sidebar Search",
       "properties": {
         "filenameSearchSidebar.depth": {
           "default": 3,
@@ -116,7 +116,7 @@
     },
     "keybindings": [
       {
-        "command": "workbench.view.extension.vscode-filename-search",
+        "command": "workbench.view.extension.filename-search",
         "key": "ctrl+shift+q",
         "mac": "cmd+shift+q"
       }
@@ -124,35 +124,35 @@
     "menus": {
       "view/item/context": [
         {
-          "command": "vscode-filename-search-open-new-win",
+          "command": "filename-search-open-new-win",
           "group": "inline",
-          "when": "view == vscode-filename-search-webview-workspace && viewItem == vscode-filename-search-list-item"
+          "when": "view == filename-search-webview-workspace && viewItem == filename-search-list-item"
         }
       ],
       "view/title": [
         {
-          "command": "vscode-filename-search-refresh",
+          "command": "filename-search-refresh",
           "group": "navigation",
-          "when": "view == vscode-filename-search-webview-workspace && vscode-filename-search-list-loaded"
+          "when": "view == filename-search-webview-workspace && filename-search-list-loaded"
         },
         {
-          "command": "vscode-filename-search-sort",
+          "command": "filename-search-sort",
           "group": "navigation",
-          "when": "view == vscode-filename-search-webview-workspace && vscode-filename-search-list-loaded"
+          "when": "view == filename-search-webview-workspace && filename-search-list-loaded"
         }
       ],
       "touchBar": [
         {
-          "command": "workbench.view.extension.vscode-filename-search",
+          "command": "workbench.view.extension.filename-search",
           "group": "display"
         }
       ]
     },
     "views": {
-      "vscode-filename-search": [
+      "filename-search": [
         {
           "type": "webview",
-          "id": "vscode-filename-search-webview-workspace",
+          "id": "filename-search-webview-workspace",
           "name": "Files"
         }
       ]
@@ -161,7 +161,7 @@
       "activitybar": [
         {
           "icon": "./resources/images/activitybar.svg",
-          "id": "vscode-filename-search",
+          "id": "filename-search",
           "title": "Filenames"
         }
       ]

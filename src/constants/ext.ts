@@ -1,7 +1,7 @@
 import { CONFIG_FOLDER } from "./config";
 const configfolder = CONFIG_FOLDER.replace(/ /g, '');
 
-export const EXT = 'vscode-filename-search';
+export const EXT = 'filename-search';
 export const EXT_LOADED = `${EXT}-list-loaded`;
 export const EXT_WSLIST_VIEW_ID = `${EXT}-list`;
 export const EXT_WSLIST_ITEM_CTX = `${EXT_WSLIST_VIEW_ID}-item`;
