@@ -35,6 +35,11 @@
     sendMessage('SHOW_SETTINGS');
   };
 
+  const handleRightClick = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+  };
+
   const handleSearchSubmit = (event) => {
     sendMessage('SEARCH', searchTerm);
 
@@ -89,12 +94,13 @@
     });
 
     wsElements.forEach((element) => {
+      element.addEventListener('contextmenu', handleRightClick);
       element.addEventListener('click', handleElementClick);
     });
 
     if (searchInput && document.activeElement.id !== 'searchWorkspaces') {
-      searchInput.focus();
-      searchInput.setSelectionRange(100, 100);
+      //searchInput.focus();
+      //searchInput.setSelectionRange(100, 100);
     }
   });
 
@@ -134,6 +140,7 @@
     });
 
     wsElements.forEach((element) => {
+      element.removeEventListener('contextmenu', handleRightClick);
       element.removeEventListener('click', handleElementClick);
     });
   });
