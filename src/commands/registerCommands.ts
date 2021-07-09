@@ -72,12 +72,6 @@ export const registerCommands = (
     })
   );
 
-  context.subscriptions.push(
-    vscode.workspace.onDidChangeConfiguration(() => {
-      vscode.commands.executeCommand(CMD_REFRESH);
-    })
-  );
-
   let fileSystemWatcher = vscode.workspace.createFileSystemWatcher('**/*.*');
 
   // rename is taken care of by create/delete
