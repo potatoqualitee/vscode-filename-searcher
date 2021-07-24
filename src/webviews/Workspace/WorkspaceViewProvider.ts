@@ -29,13 +29,14 @@ const { executeCommand } = vscode.commands;
 const { list, setPersistedState, setSearchTerm, setShowPaths } = workspaceSlice.actions;
 
 export class WorkspaceViewProvider implements vscode.WebviewViewProvider {
+  // registerWebviewViewProvider(viewId:String, provider:WebviewViewProvider, ?options:{webviewOptions:Null<{retainContextWhenHidden:Null<Bool>}>}):Disposable
   public static readonly viewType = EXT_WEBVIEW_WS;
   private _view?: vscode.WebviewView;
 
   constructor(
     private readonly _extensionUri: vscode.Uri,
     private readonly _globalState: GlobalState
-  ) {}
+  ) { }
 
   public focusInput() {
     if (this._view?.visible) {
@@ -173,7 +174,7 @@ export class WorkspaceViewProvider implements vscode.WebviewViewProvider {
 
         case Actions.SEARCH:
           if (payload !== undefined) {
-            store.dispatch(setSearchTerm(payload));
+            store.dispatch(setSearchTerm(payload.trim()));
           }
           break;
 
