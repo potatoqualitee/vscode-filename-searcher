@@ -1,6 +1,6 @@
 (function () {
   const vscode = acquireVsCodeApi();
-
+  import { workspace } from 'vscode';
   const newWinIcons = Array.from(document.getElementsByClassName('list__buttons'));
   const searchForm = document.getElementById('searchWorkspacesForm');
   const searchInput = document.getElementById('searchWorkspaces');
@@ -42,7 +42,6 @@
 
   const handleSearchSubmit = (event) => {
     sendMessage('SEARCH', searchTerm);
-
     // Stop submit navigating: https://github.com/microsoft/vscode/issues/125485
     // Should be done after sending message otherwise the message is not dispatched
     if (event) {
@@ -55,6 +54,10 @@
   };
 
   var timeout = null;
+  //const autoSearchEnabled = workspace.getConfiguration().get('filenameSearchSidebar.autoSearchEnabled') || true;
+  //const searchDelay = workspace.getConfiguration().get('filenameSearchSidebar.searchDelay') || 750;
+  const autoSearchEnabled = true;
+  const searchDelay = 750;
   const handleSearchKeyUp = (event) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => {
@@ -64,8 +67,9 @@
         searchTerm = event.target.value;
       }
       handleSearchSubmit();
-    }, 750);
+    }, searchDelay);
   };
+
 
   const handleSearch = (event) => {
     if (event.target.value === '') {
