@@ -1,6 +1,5 @@
 (function () {
   const vscode = acquireVsCodeApi();
-  import { workspace } from 'vscode';
   const newWinIcons = Array.from(document.getElementsByClassName('list__buttons'));
   const searchForm = document.getElementById('searchWorkspacesForm');
   const searchInput = document.getElementById('searchWorkspaces');
@@ -54,10 +53,7 @@
   };
 
   var timeout = null;
-  //const autoSearchEnabled = workspace.getConfiguration().get('filenameSearchSidebar.autoSearchEnabled') || true;
-  //const searchDelay = workspace.getConfiguration().get('filenameSearchSidebar.searchDelay') || 750;
-  const autoSearchEnabled = true;
-  const searchDelay = 750;
+  const searchDelay = 1000;
   const handleSearchKeyUp = (event) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => {
@@ -66,10 +62,12 @@
       } else {
         searchTerm = event.target.value;
       }
-      handleSearchSubmit();
+      sendMessage('MIGHT_SEARCH', searchTerm);
+      if (event) {
+        event.preventDefault();
+      }
     }, searchDelay);
   };
-
 
   const handleSearch = (event) => {
     if (event.target.value === '') {

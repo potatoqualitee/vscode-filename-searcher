@@ -178,6 +178,14 @@ export class WorkspaceViewProvider implements vscode.WebviewViewProvider {
           }
           break;
 
+
+        case Actions.MIGHT_SEARCH:
+          var autoSearch: boolean = (vscode.workspace.getConfiguration().get('filenameSearchSidebar.autoSearch') || false);
+          if (payload !== undefined && autoSearch) {
+            store.dispatch(setSearchTerm(payload.trim()));
+          }
+          break;
+
         case Actions.SHOW_SETTINGS:
           executeCommand('workbench.action.openSettings', 'filenameSearchSidebar');
           break;
