@@ -101,8 +101,8 @@
     });
 
     if (searchInput && document.activeElement.id !== 'searchWorkspaces') {
-      //searchInput.focus();
-      //searchInput.setSelectionRange(100, 100);
+      searchInput.focus();
+      searchInput.setSelectionRange(100, 100);
     }
   });
 
