@@ -18,13 +18,13 @@ export const findWorkspaceFiles = async (): Promise<WsFiles | false> => {
       const folderCollection = baseFolder.split(",");
       for (var folder of folderCollection) {
         if (checkFile(folder)) {
-          allFiles.push(await collectFilesFromFolder(folder.trim(), FS_WS_FILETYPE, maxDepth, 0));
+          allFiles.push(await collectFilesFromFolder(folder.trim(), FS_WS_FILETYPE, maxDepth, 0).catch(e => { }));
         }
       }
     };
 
-    await getIt(baseFolder);
-    await Promise.all(allFiles);
+    await getIt(baseFolder).catch(e => { });
+    await Promise.all(allFiles).catch(e => { });
     return [].concat(...allFiles);
   } catch (err) {
     return [];
