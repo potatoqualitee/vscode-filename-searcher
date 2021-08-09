@@ -51,13 +51,10 @@
     "configuration": {
       "title": "Filename Sidebar Search",
       "properties": {
-        "filenameSearchSidebar.depth": {
-          "default": 3,
-          "description": "What depth of subfolders should also be looked in. Range: 0-5",
-          "maximum": 5,
-          "minimum": 0,
-          "scope": "application",
-          "type": "number"
+        "filenameSearchSidebar.caseSensitive": {
+          "type": "boolean",
+          "default": false,
+          "description": "Case sensitive search"
         },
         "filenameSearchSidebar.codicon": {
           "default": "file",
@@ -65,11 +62,13 @@
           "scope": "application",
           "type": "string"
         },
-        "filenameSearchSidebar.includeFileTypes": {
-          "default": "",
-          "description": "Return only these specific file types. Example: php, ts, ps1",
+        "filenameSearchSidebar.depth": {
+          "default": 3,
+          "description": "What depth of subfolders should also be looked in. Range: 0-5",
+          "maximum": 5,
+          "minimum": 0,
           "scope": "application",
-          "type": "string"
+          "type": "number"
         },
         "filenameSearchSidebar.excludeFolders": {
           "default": "node_modules, .git",
@@ -82,6 +81,25 @@
           "description": "The folder to look in for workspace files. This extension will return files from your workspace by default.",
           "scope": "application",
           "type": "string"
+        },
+        "filenameSearchSidebar.includeFileTypes": {
+          "default": "",
+          "description": "Return only these specific file types. Example: php, ts, ps1",
+          "scope": "application",
+          "type": "string"
+        },
+        "filenameSearchSidebar.autoSearch": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically search instead of manually pressing enter."
+        },
+        "filenameSearchSidebar.searchMinimum": {
+          "default": 0,
+          "description": "The minimum number of workspace files required for the search box to be displayed. 0 will always show the search box. Range: 0-100",
+          "maximum": 100,
+          "minimum": 0,
+          "scope": "application",
+          "type": "number"
         },
         "filenameSearchSidebar.showPaths": {
           "default": "As needed",
@@ -98,19 +116,6 @@
           ],
           "scope": "application",
           "type": "string"
-        },
-        "filenameSearchSidebar.searchMinimum": {
-          "default": 0,
-          "description": "The minimum number of workspace files required for the search box to be displayed. 0 will always show the search box. Range: 0-100",
-          "maximum": 100,
-          "minimum": 0,
-          "scope": "application",
-          "type": "number"
-        },
-        "filenameSearchSidebar.caseSensitive": {
-          "type": "boolean",
-          "default": false,
-          "description": "Case sensitive search"
         }
       }
     },

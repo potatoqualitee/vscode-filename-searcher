@@ -10,18 +10,20 @@ export const fetchFulfilled = (
   state: WorkspaceState,
   action: WorkspaceThunkAction<WorkspaceFiles>
 ) => {
-  state.files = action.payload;
-  state.convertedFiles = action.payload ? convertWsFiles(action.payload, state.selected) : [];
+  try {
+    state.files = action.payload;
+    state.convertedFiles = action.payload ? convertWsFiles(action.payload, state.selected) : [];
 
-  if (state.files === false) {
-    state.isFolderInvalid = true;
-    state.state = 'invalid';
-    state.visibleFiles = [];
-  } else {
-    state.isFolderInvalid = false;
-    state.state = 'list';
-    state.visibleFiles = getVisibleFiles(state.convertedFiles, state.search, state.sort);
-  }
+    if (state.files === false) {
+      state.isFolderInvalid = true;
+      state.state = 'invalid';
+      state.visibleFiles = [];
+    } else {
+      state.isFolderInvalid = false;
+      state.state = 'list';
+      state.visibleFiles = getVisibleFiles(state.convertedFiles, state.search, state.sort);
+    }
+  } catch (err) { }
 };
 
 export const fetchPending = (state: WorkspaceState) => {

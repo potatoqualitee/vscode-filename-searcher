@@ -16,6 +16,7 @@ I wrote this because I'm not good at key combos and prefer using a mouse for sea
 
 | Setting | Description | Default Value | Type |
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------- |
+| Auto Search | Automatically search after 1 second instead of manually pressing enter | true | Boolean |
 | Case Sensitive | Case sensitive search | false | Boolean |
 | Codicon | The codicon that shows up on the side of the filename. Alternatives include `file-binary`, `book`, and more. | file | String |
 | Depth | The depth of subfolders to include in the search. | 0 | Number 0-5 |

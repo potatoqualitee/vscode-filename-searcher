@@ -10,7 +10,7 @@ export const collectFilesFromFolder = async (
   fileType: string,
   maxDepth: number,
   curDepth: number
-): Promise<WsFiles> => {
+): Promise<WsFiles | false> => {
   if (curDepth <= maxDepth) {
     try {
       var foldersToIgnoreconfig: string =
@@ -27,7 +27,7 @@ export const collectFilesFromFolder = async (
 
           return allFiles;
         }, []);
-      });
+      }).catch(e => { });
 
       const folders = getFilenamesOfType('folders', filenames, folder);
       let files = getFilenamesOfType('files', filenames, folder);
@@ -39,7 +39,7 @@ export const collectFilesFromFolder = async (
             fileType,
             maxDepth,
             curDepth + 1
-          );
+          ).catch(e => { });
           files = [...files, ...subFiles];
         }
       }
