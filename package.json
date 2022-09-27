@@ -64,9 +64,9 @@
         },
         "filenameSearchSidebar.depth": {
           "default": 3,
-          "description": "What depth of subfolders should also be looked in. Range: 0-5",
-          "maximum": 5,
-          "minimum": 0,
+          "description": "What depth of subfolders should also be looked in. Allowed values from -1 to 10. -1 enables searching the whole tree.",
+          "maximum": 10,
+          "minimum": -1,
           "scope": "application",
           "type": "number"
         },

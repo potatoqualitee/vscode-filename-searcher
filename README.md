@@ -19,7 +19,7 @@ I wrote this because I'm not good at key combos and prefer using a mouse for sea
 | Auto Search | Automatically search after 1 second instead of manually pressing enter | true | Boolean |
 | Case Sensitive | Case sensitive search | false | Boolean |
 | Codicon | The codicon that shows up on the side of the filename. Alternatives include `file-binary`, `book`, and more. | file | String |
-| Depth | The depth of subfolders to include in the search. | 0 | Number 0-5 |
+| Depth | The depth of subfolders to include in the search. -1 enables searching the whole tree. | 3 | Number -1 - 10 |
 | Folder | The folder to look for workspace files in. If Folder is empty, your home folder will be used. | None (all of your current workspaces will be used) | String |
 | Include File Types | Return only these specific file types. Example: php, ts, ps1 | | String |
 | Search minimum | The minimum number of workspaces required before the search box is displayed. 0 Will always display the search box. | 15 | Number 0-100 |

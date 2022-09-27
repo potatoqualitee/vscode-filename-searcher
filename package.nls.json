@@ -1,7 +1,7 @@
 {
   "config.title": "File Search Sidebar",
   "config.workspaceFolder.description": "The folder to look in for workspace files. This extension will return files from your workspace by default.",
-  "config.workspaceFolderDepth.description": "What depth of subfolders should also be looked in. Range: 0-5",
+  "config.workspaceFolderDepth.description": "What depth of subfolders should also be looked in. Allowed values from -1 to 10. -1 enables searching the whole tree.",
   "config.workspaceSearchMinimum.description": "The minimum number of workspace files required for the search box to be displayed. 0 will always show the search box. Range: 0-100",
   "config.workspaceShowPath.always": "Always show paths",
   "config.workspaceShowPath.asneeded": "Show paths when a workspace has the same label as another",

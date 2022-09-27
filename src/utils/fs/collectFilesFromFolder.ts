@@ -11,7 +11,7 @@ export const collectFilesFromFolder = async (
   maxDepth: number,
   curDepth: number
 ): Promise<WsFiles | false> => {
-  if (curDepth <= maxDepth) {
+  if (maxDepth === -1 || curDepth <= maxDepth) {
     try {
       var foldersToIgnoreconfig: string =
         workspace.getConfiguration().get('filenameSearchSidebar.excludeFolders') || ''; // Folders that slow down collection or won't have workspace files in
